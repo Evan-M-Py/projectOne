@@ -1,3 +1,5 @@
+/* index.html page  */
+
 /* jumbotron pushed down to show space between navbar */
 .my-3 {
     margin-top: 4.5rem!important;
@@ -16,6 +18,7 @@
 }
 
 /* background color */
+html,
 body {
     background: -webkit-linear-gradient(-43deg, rgb(181, 246, 248), rgb(255, 240, 178));
     background: linear-gradient(-43deg, rgb(181, 246, 248), rgb(255, 240, 178));
@@ -42,10 +45,10 @@ body {
 
 /* change container positioning to center of page  */
 .position {
-    margin-bottom: 1.5rem!important;
+    margin-bottom: 5rem!important;
     margin-top: 5rem!important;
 }
 
-label {
+/* label {
     font-size: 1.2rem;
-}
+} */
