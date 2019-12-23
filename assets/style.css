@@ -36,3 +36,16 @@ body {
 .bg-dark {
     background-color: #596469!important;
 }
+
+/* --------------------------------------------------------------------------------------------------------------------- */
+/* input.html page  */
+
+/* change container positioning to center of page  */
+.position {
+    margin-bottom: 1.5rem!important;
+    margin-top: 5rem!important;
+}
+
+label {
+    font-size: 1.2rem;
+}
