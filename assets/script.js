@@ -1,18 +1,16 @@
-const subBtnEl = document.getElementById("submitBtn");
+//SUBMIT BUTTON FUNTIONALITY
+    //needs to flip html pages
+    //needs to save user info to local storage
 
+const subBtnEl = document.getElementById("submitBtn");
 
 $('#submitBtn').click(function(){
     let userNameEl = document.getElementById("userName").value;
     let userEmailEl = document.getElementById("userEmail").value;
-    let userLocEl = document.getElementById("userLoc").value;
-    let userDOBEl = document.getElementById("userDOB").value;
-    console.log(userNameEl);
-    console.log(userEmailEl);
-    console.log(userLocEl);
-    console.log(userDOBEl);
+    let userAstro = document.getElementById("userAstro").value;
 
-    let userInput = [ userNameEl, userEmailEl, userLocEl, userDOBEl];
-    let keyVal = ['name:', 'email:', 'city, State:', 'DOB;'];
+    let userInput = [ userNameEl, userEmailEl, userAstro];
+    let keyVal = ['name:', 'email:', 'Asro:'];
     
     for (let i = 0; i < userInput.length; i++) {
     localStorage.setItem(keyVal[i], userInput[i]);
@@ -21,7 +19,6 @@ $('#submitBtn').click(function(){
 
 
 //Cerae's weather gadget
-
 
 // SELECT ELEMENTS
 const iconElement = document.querySelector(".weather-icon");
@@ -43,10 +40,11 @@ const KELVIN = 273;
 const key = "5e7a2f48aa04c40eccc9d053966865d0";
 
 // CHECK IF BROWSER SUPPORTS GEOLOCATION
-if('geolocation' in navigator){
+function browserLoctionInitiate () {
+    if('geolocation' in navigator){
     navigator.geolocation.getCurrentPosition(setPosition, showError);
-    var test = navigator.geolocation.getCurrentPosition(setPosition, showError).value;
-    console.log(typeof test);
+    var test = navigator.geolocation.getCurrentPosition(setPosition, showError);
+    console.log( setPosition);
 }else{
     notificationElement.style.display = "block";
     notificationElement.innerHTML = "<p>Browser doesn't Support Geolocation</p>";
@@ -89,7 +87,7 @@ function getWeather(latitude, longitude){
 
 // DISPLAY WEATHER TO UI
 function displayWeather(){
-    iconElement.innerHTML = `<img src="icons/${weather.iconId}.png"/>`;
+    iconElement.innerHTML = `<img src="images/icons/${weather.iconId}.png"/>`;
     tempElement.innerHTML = `${weather.temperature.value}°<span>C</span>`;
     descElement.innerHTML = weather.description;
     locationElement.innerHTML = `${weather.city}, ${weather.country}`;
@@ -114,4 +112,4 @@ tempElement.addEventListener("click", function(){
         tempElement.innerHTML = `${weather.temperature.value}°<span>C</span>`;
         weather.temperature.unit = "celsius"
     }
-});
+})};
