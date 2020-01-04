@@ -22,6 +22,7 @@ $('#submitBtn').click(function(){
 
 //Cerae's weather gadget
 
+
 // SELECT ELEMENTS
 const iconElement = document.querySelector(".weather-icon");
 const tempElement = document.querySelector(".temperature-value p");
