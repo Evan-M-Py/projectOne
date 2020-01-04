@@ -67,9 +67,9 @@
                     </div>
                     <div class="input-group mb-3">
                         <div class="input-group-prepend">
-                          <span class="input-group-text" id="inputGroup-sizing-default">Date of Birth</span>
+                            <span class="input-group-text" id="inputGroup-sizing-default">Date of Birth</span>
                         </div>
-                        <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                        <input class="form-control" type="date" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
                     </div>
                     <label for="exampleFormControlSelect1">Music Preference</label>
                     <select class="form-control" id="exampleFormControlSelect1">
@@ -166,7 +166,28 @@
 
         <div class="row text-center">
 
-            <div class="col-lg-6 col-md-6 mb-4">
+            <div class="container">
+                <div class="app-title">
+                    <p>Weather</p>
+                </div>
+                <div class="notification"> </div>
+                <div class="weather-container">
+                    <div class="weather-icon">
+                        <img src="icons/unknown.png" alt="">
+                    </div>
+                    <div class="temperature-value">
+                        <p>- °<span>C</span></p>
+                    </div>
+                    <div class="temperature-description">
+                        <p> - </p>
+                    </div>
+                    <div class="location">
+                        <p>-</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- <div class="col-lg-6 col-md-6 mb-4">
                 <div class="card h-100">
                     <img class="card-img-top" src="images/weather.png" alt="weatherPhoto">
                     <div class="card-body">
@@ -190,7 +211,7 @@
                         <a href="#" class="btn btn-primary">Find Out More!</a>
                     </div>
                 </div>
-            </div>
+            </div> -->
 
         </div>
         <!-- end of row -->
@@ -211,7 +232,7 @@
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-
+    <script rel="script" src="assets/script.js"></script>
 </body>
 
 </html>
