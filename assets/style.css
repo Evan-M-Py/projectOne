@@ -48,3 +48,20 @@ body {
     margin-bottom: 5rem!important;
     margin-top: 5rem!important;
 }
+
+
+
+.fade-in {
+    animation: fadeIn 2s;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
