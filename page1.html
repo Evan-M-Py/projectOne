@@ -1,21 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/style.css">
-    
-    <title>Project Name</title>
+
+    <title>On The Right Foot</title>
 </head>
 
 <body>
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
         <div class="container">
-            <a class="navbar-brand" href="#">Project Name</a>
+            <a class="navbar-brand" href="#">On The Right Foot</a>
             <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button> -->
@@ -35,9 +37,10 @@
             </div>
         </div>
     </nav>
-  
+
     <!-- Modal -->
-    <div class="modal fade" id="exampleModalScrollable" tabindex="-1" role="dialog"     aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
+    <div class="modal fade" id="exampleModalScrollable" tabindex="-1" role="dialog"
+        aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
         <div class="modal-dialog modal-dialog-scrollable" role="document">
             <div class="modal-content">
                 <div class="modal-header">
@@ -47,38 +50,43 @@
                     </button>
                 </div>
                 <div class="modal-body">
-                    <div class="input-group mb-3">
-                        <div class="input-group-prepend">
-                          <span class="input-group-text" id="inputGroup-sizing-default">Name</span>
-                        </div>
-                        <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                        <label class="form-check-label" for="defaultCheck1">
+                            Goals
+                        </label>
                     </div>
-                    <div class="input-group mb-3">
-                        <div class="input-group-prepend">
-                          <span class="input-group-text" id="inputGroup-sizing-default">Email</span>
-                        </div>
-                        <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                    <br>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                        <label class="form-check-label" for="defaultCheck1">
+                            News
+                        </label>
                     </div>
-                    <div class="input-group mb-3">
-                        <div class="input-group-prepend">
-                          <span class="input-group-text" id="inputGroup-sizing-default">Location</span>
-                        </div>
-                        <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                    <br>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                        <label class="form-check-label" for="defaultCheck1">
+                            Horoscope
+                        </label>
                     </div>
-                    <div class="input-group mb-3">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text" id="inputGroup-sizing-default">Date of Birth</span>
-                        </div>
-                        <input class="form-control" type="date" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                    <br>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                        <label class="form-check-label" for="defaultCheck1">
+                            Weather
+                        </label>
                     </div>
-                    <label for="exampleFormControlSelect1">Music Preference</label>
-                    <select class="form-control" id="exampleFormControlSelect1">
-                        <option selected>Select...</option>
-                        <option>1</option>
-                        <option>2</option>
-                        <option>3</option>
-                        <option>4</option>
-                    </select>
+                    <br>
+                    <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                            <div class="input-group input-group-sm mb-3">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text" id="inputGroup-sizing-sm">Music</span>
+                                </div>
+                                <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                            </div>
+                        </div>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -91,14 +99,16 @@
 
     <!-- Page Content -->
     <div class="container">
-        
+
         <!-- Jumbotron Header -->
         <header class="jumbotron my-3 padding">
             <h1 class="display-3">Good Morning,
                 <span class="insertName"></span>!</h1>
             <hr class="my-4">
             <p class="lead">
-                <span class="insertQuote">"Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta facere ex et totam obcaecati rem odio quos accusamus corporis facilis, dignissimos quis veritatis error optio quasi delectus illo atque ratione!"</span>
+                <span class="insertQuote">"Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta facere ex et
+                    totam obcaecati rem odio quos accusamus corporis facilis, dignissimos quis veritatis error optio
+                    quasi delectus illo atque ratione!"</span>
             </p>
         </header>
 
@@ -110,7 +120,13 @@
                     <img class="card-img-top" src="images/music.png" alt="musicPhoto">
                     <div class="card-body">
                         <h4 class="card-title">Song of the Day</h4>
-                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente esse necessitatibus neque. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quibusdam aliquid facilis, nobis perspiciatis numquam quidem? Aut amet non tenetur reiciendis architecto quis commodi minima atque, eos culpa iste dignissimos voluptate. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sunt tempore ex voluptas eum fuga voluptatem ullam nemo. Nostrum ab accusamus, quae distinctio deleniti adipisci similique placeat consequuntur pariatur commodi dolores.</p>
+                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente esse
+                            necessitatibus neque. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quibusdam
+                            aliquid facilis, nobis perspiciatis numquam quidem? Aut amet non tenetur reiciendis
+                            architecto quis commodi minima atque, eos culpa iste dignissimos voluptate. Lorem, ipsum
+                            dolor sit amet consectetur adipisicing elit. Sunt tempore ex voluptas eum fuga voluptatem
+                            ullam nemo. Nostrum ab accusamus, quae distinctio deleniti adipisci similique placeat
+                            consequuntur pariatur commodi dolores.</p>
                     </div>
                     <div class="card-footer">
                         <a href="#" class="btn btn-primary">Find Out More!</a>
@@ -130,9 +146,11 @@
                                         <input type="checkbox" aria-label="Checkbox for following text input">
                                     </div>
                                 </div>
-                                <input type="text" class="form-control" placeholder="Goal #1" aria-label="goals" aria-describedby="button-addon2">
+                                <input type="text" class="form-control" placeholder="Goal #1" aria-label="goals"
+                                    aria-describedby="button-addon2">
                                 <div class="input-group-append">
-                                    <button class="btn btn-outline-secondary" type="button" id="button-addon2">Save</button>
+                                    <button class="btn btn-outline-secondary" type="button"
+                                        id="button-addon2">Save</button>
                                 </div>
                             </div>
                             <div class="input-group mb-3">
@@ -141,9 +159,11 @@
                                         <input type="checkbox" aria-label="Checkbox for following text input">
                                     </div>
                                 </div>
-                                <input type="text" class="form-control" placeholder="Goal #2" aria-label="goals" aria-describedby="button-addon2">
+                                <input type="text" class="form-control" placeholder="Goal #2" aria-label="goals"
+                                    aria-describedby="button-addon2">
                                 <div class="input-group-append">
-                                    <button class="btn btn-outline-secondary" type="button" id="button-addon2">Save</button>
+                                    <button class="btn btn-outline-secondary" type="button"
+                                        id="button-addon2">Save</button>
                                 </div>
                             </div>
                             <div class="input-group mb-3">
@@ -152,9 +172,11 @@
                                         <input type="checkbox" aria-label="Checkbox for following text input">
                                     </div>
                                 </div>
-                                <input type="text" class="form-control" placeholder="Goal #3" aria-label="goals" aria-describedby="button-addon2">
+                                <input type="text" class="form-control" placeholder="Goal #3" aria-label="goals"
+                                    aria-describedby="button-addon2">
                                 <div class="input-group-append">
-                                    <button class="btn btn-outline-secondary" type="button" id="button-addon2">Save</button>
+                                    <button class="btn btn-outline-secondary" type="button"
+                                        id="button-addon2">Save</button>
                                 </div>
                             </div>
                         </p>
@@ -166,7 +188,7 @@
 
         <div class="row text-center">
 
-            <div class="container">
+            <!-- <div class="container">
                 <div class="app-title">
                     <p>Weather</p>
                 </div>
@@ -185,14 +207,35 @@
                         <p>-</p>
                     </div>
                 </div>
-            </div>
+            </div> -->
 
-            <!-- <div class="col-lg-6 col-md-6 mb-4">
+            <div class="col-lg-6 col-md-6 mb-4">
                 <div class="card h-100">
                     <img class="card-img-top" src="images/weather.png" alt="weatherPhoto">
                     <div class="card-body">
                         <h4 class="card-title">Today's Weather Report</h4>
-                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente esse necessitatibus neque. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Necessitatibus commodi assumenda ullam fuga? Ad debitis impedit vero natus quisquam dignissimos illo modi tenetur odit, est officia commodi repellendus numquam enim? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Recusandae quos assumenda est quia, molestiae sunt placeat quae non consequuntur ratione in aut dolores voluptas dicta alias autem, itaque esse ullam.</p>
+                        <p class="card-text">
+                            <div class="container">
+                                <div class="app-title">
+                                    <p>Weather</p>
+                                </div>
+                                <div class="notification"> </div>
+                                <div class="weather-container">
+                                    <div class="weather-icon">
+                                        <img src="icons/unknown.png" alt="">
+                                    </div>
+                                    <div class="temperature-value">
+                                        <p>- °<span>C</span></p>
+                                    </div>
+                                    <div class="temperature-description">
+                                        <p> - </p>
+                                    </div>
+                                    <div class="location">
+                                        <p>-</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </p>
                     </div>
                     <div class="card-footer">
                         <a href="#" class="btn btn-primary">Find Out More!</a>
@@ -205,13 +248,40 @@
                     <img class="card-img-top" src="images/astro.png" alt="astroPhoto">
                     <div class="card-body">
                         <h4 class="card-title">Your Horoscope</h4>
-                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo magni sapiente, tempore debitis beatae culpa natus architecto. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Numquam commodi eos consectetur molestiae perferendis ipsum ea explicabo. Dignissimos, quasi. Qui unde porro explicabo. Quidem incidunt, hic cumque expedita cum ut! Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit repudiandae quae voluptas minima quidem officia? Quae, voluptatum consequatur inventore cum magni nesciunt delectus dolorem optio, id ad, eaque sint minus?</p>
+                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo magni
+                            sapiente, tempore debitis beatae culpa natus architecto. Lorem ipsum, dolor sit amet
+                            consectetur adipisicing elit. Numquam commodi eos consectetur molestiae perferendis ipsum ea
+                            explicabo. Dignissimos, quasi. Qui unde porro explicabo. Quidem incidunt, hic cumque
+                            expedita cum ut! Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit repudiandae
+                            quae voluptas minima quidem officia? Quae, voluptatum consequatur inventore cum magni
+                            nesciunt delectus dolorem optio, id ad, eaque sint minus?</p>
                     </div>
                     <div class="card-footer">
                         <a href="#" class="btn btn-primary">Find Out More!</a>
                     </div>
                 </div>
-            </div> -->
+            </div>
+
+        </div>
+        <div class="row text-center">
+            <div class="col-lg-6 col-md-6 mb-4">
+                <div class="card h-100">
+                    <img class="card-img-top" src="images/rsz_43017.jpg" alt="NewsPhoto">
+                    <div class="card-body">
+                        <h4 class="card-title">Top News Story</h4>
+                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo magni
+                            sapiente, tempore debitis beatae culpa natus architecto. Lorem ipsum, dolor sit amet
+                            consectetur adipisicing elit. Numquam commodi eos consectetur molestiae perferendis ipsum ea
+                            explicabo. Dignissimos, quasi. Qui unde porro explicabo. Quidem incidunt, hic cumque
+                            expedita cum ut! Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit repudiandae
+                            quae voluptas minima quidem officia? Quae, voluptatum consequatur inventore cum magni
+                            nesciunt delectus dolorem optio, id ad, eaque sint minus?</p>
+                    </div>
+                    <div class="card-footer">
+                        <a href="#" class="btn btn-primary">Find Out More!</a>
+                    </div>
+                </div>
+            </div>
 
         </div>
         <!-- end of row -->
@@ -222,16 +292,22 @@
     <!-- Footer -->
     <footer class="py-3 bg-dark">
         <div class="container">
-        <p class="m-0 text-center text-white">Copyright &copy; Website Name 2020</p>
+            <p class="m-0 text-center text-white">Copyright &copy; On The Right Foot 2020</p>
         </div>
     </footer>
     <!-- end of footer -->
 
 
     <!-- Bootstrap core JavaScript -->
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
     <script rel="script" src="assets/script.js"></script>
 </body>
 
