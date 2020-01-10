@@ -41,16 +41,16 @@ body {
 }
 
 /* --------------------------------------------------------------------------------------------------------------------- */
-/* input.html page  */
+/*  welcome html page  */
 
 /* change container positioning to center of page  */
 .position {
     margin-bottom: 5rem!important;
-    margin-top: 5rem!important;
+    margin-top: 8rem!important;
 }
 
 
-
+/* fade and resize on navbar */
 .fade-in {
     animation: fadeIn 3s;
 }
