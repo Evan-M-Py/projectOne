@@ -28,7 +28,7 @@
                     <div class="col">
                         <div class="form-group">
                             <label for="formGroupExampleInput">Music Preference:</label>
-                            <input type="text" class="form-control" id="userName" placeholder="Artist's Name">
+                            <input type="text" class="form-control" id="musicChoice" placeholder="Artist's Name">
                         </div>                   
                     </div>
                 </div>
@@ -38,18 +38,18 @@
                             <label for="userAstro">Pick Your Astrological Sign:</label>
                             <select class="form-control" id="userAstro">
                                 <option selected>Select One:</option>
-                                <option>Capricorn: December 22 – January 19</option>
-                                <option>Aquarius: January 20 – February 18</option>
-                                <option>Pisces: February 19 – March 20</option>
-                                <option>Aries: March 21 – April 19</option>
-                                <option>Taurus: April 20 – May 20</option>
-                                <option>Gemini: May 21 – June 20</option>
-                                <option>Cancer: June 21 – July 22</option>
-                                <option>Leo: July 32 – August 22</option>
-                                <option>Virgo: August 23 – September 22</option>
-                                <option>Libra: September 23 – October 22</option>
-                                <option>Scorpio: October 23 – November 21</option>
-                                <option>Sagittarius: November 22 – December 21</option>
+                                <option value="aries">Aries: March 21 – April 19</option>
+                                <option value="taurus">Taurus: April 20 – May 20</option>
+                                <option value="gemini">Gemini: May 21 – June 20</option>
+                                <option value="cancer">Cancer: June 21 – July 22</option>
+                                <option value="leo">Leo: July 32 – August 22</option>
+                                <option value="virgo">Virgo: August 23 – September 22</option>
+                                <option value="libra">Libra: September 23 – October 22</option>
+                                <option value="scorpio">Scorpio: October 23 – November 21</option>
+                                <option value="sagittarius">Sagittarius: November 22 – December 21</option>
+                                <option value="capricorn">Capricorn: December 22 – January 19</option>
+                                <option value="aquarius">Aquarius: January 20 – February 18</option>
+                                <option value="pisces">Pisces:February 19 – March 20</option>
                             </select>
                         </div> 
                     </div>
@@ -61,16 +61,16 @@
                         <div class="row mt-1">
                             <div class="col-6">
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-                                    <label class="form-check-label" for="defaultCheck1">
+                                    <input class="form-check-input" type="checkbox" id="userWeather">
+                                    <label class="form-check-label" for="userWeather">
                                     The Weather
                                     </label>
                                 </div>
                             </div>
                             <div class="col-6">
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-                                    <label class="form-check-label" for="defaultCheck1">
+                                    <input class="form-check-input" type="checkbox" id="userNews">>
+                                    <label class="form-check-label" for="userNews">
                                     Daily News
                                     </label>
                                 </div>
@@ -94,7 +94,7 @@
     <!-- end of footer -->
 
     <!-- Bootstrap core JavaScript -->
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>    
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
     <script rel="script" src="assets/script.js"></script>
