@@ -39,7 +39,31 @@ body {
 .bg-dark {
     background-color: #596469!important;
 }
-
+/* editing font of quote */
+#quote{
+    font-family: "Courier New", Courier, monospace;
+    font-size: 18px;
+    letter-spacing: 1.6px;
+    word-spacing: 3.4px;
+    color: #000000;
+    font-weight: normal;
+    text-decoration: none;
+    font-style: normal;
+    font-variant: normal;
+    text-transform: none;
+}
+#author{
+    font-family: "Palatino Linotype", "Book Antiqua", serif;
+    font-size: 15px;
+    letter-spacing: 1.6px;
+    word-spacing: 6px;
+    color: #000000;
+    font-weight: normal;
+    text-decoration: none;
+    font-style: normal;
+    font-variant: normal;
+    text-transform: none;
+}
 /* --------------------------------------------------------------------------------------------------------------------- */
 /*  welcome html page  */
 
