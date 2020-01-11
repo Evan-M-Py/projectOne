@@ -12,7 +12,7 @@
 
 <body>
     <!-- Page Content -->
-    <div class="container">
+    <div class="container fade-in">
         <div class="jumbotron padding position"> 
             <h1 class="display-3">Welcome to On The Right Foot</h1>
             <p class="lead">Wake up the way you want to wake up!</p>
@@ -27,23 +27,20 @@
                     </div>
                     <div class="col">
                         <div class="form-group">
-                            <label for="formGroupExampleInput2">Email:</label>
-                            <input type="text" class="form-control" id="userEmail" placeholder="email@gmail.com">
-                        </div>                    
+                            <label for="formGroupExampleInput">Music Preference:</label>
+                            <input type="text" class="form-control" id="userName" placeholder="Artist's Name">
+                        </div>                   
                     </div>
                 </div>
                 <div class="row">
                     <div class="col">
                         <div class="form-group">
-                            <label for="formGroupExampleInput">Music Preference:</label>
-                            <input type="text" class="form-control" id="userName" placeholder="Artist's Name">
-                        </div> 
-                    </div>
-                    <div class="col">
-                        <div class="form-group">
                             <label for="userAstro">Pick Your Astrological Sign:</label>
                             <select class="form-control" id="userAstro">
                                 <option selected>Select One:</option>
+                                <option>Capricorn: December 22 – January 19</option>
+                                <option>Aquarius: January 20 – February 18</option>
+                                <option>Pisces: February 19 – March 20</option>
                                 <option>Aries: March 21 – April 19</option>
                                 <option>Taurus: April 20 – May 20</option>
                                 <option>Gemini: May 21 – June 20</option>
@@ -53,31 +50,34 @@
                                 <option>Libra: September 23 – October 22</option>
                                 <option>Scorpio: October 23 – November 21</option>
                                 <option>Sagittarius: November 22 – December 21</option>
-                                <option>Capricorn: December 22 – January 19</option>
-                                <option>Aquarius: January 20 – February 18</option>
-                                <option>Pisces:February 19 – March 20</option>
                             </select>
                         </div> 
                     </div>
-                </div>
-                <div class="row">
+                
                     <div class="col">
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-                            <label class="form-check-label" for="defaultCheck1">
-                              Give me the Weather!
-                            </label>
-                          </div>
+                        <div class="row ml-0">
+                            <label for="formGroupExampleInput">Would you like to see:</label>
+                        </div>
+                        <div class="row mt-1">
+                            <div class="col-6">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                                    <label class="form-check-label" for="defaultCheck1">
+                                    The Weather
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                                    <label class="form-check-label" for="defaultCheck1">
+                                    Daily News
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="col">
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-                            <label class="form-check-label" for="defaultCheck1">
-                              I want my morning news!
-                            </label>
-                        </div>                  
-                    </div>
-                </div>
+                </div>  
             </form>
             <br>
             <a class="btn btn-primary btn-lg" id="submitBtn" href="#" role="button">Submit</a>
@@ -94,7 +94,7 @@
     <!-- end of footer -->
 
     <!-- Bootstrap core JavaScript -->
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script></script>>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
     <script rel="script" src="assets/script.js"></script>
