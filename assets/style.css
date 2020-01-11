@@ -41,10 +41,41 @@ body {
 }
 
 /* --------------------------------------------------------------------------------------------------------------------- */
-/* input.html page  */
+/*  welcome html page  */
 
 /* change container positioning to center of page  */
 .position {
     margin-bottom: 5rem!important;
-    margin-top: 5rem!important;
+    margin-top: 8rem!important;
 }
+
+
+/* fade and resize on navbar */
+.fade-in {
+    animation: fadeIn 3s;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+
+.grow-title { transition: all .2s ease-in-out; }
+.grow-title:hover { transform: scale(1.3); }
+
+#rotating_image {
+    -webkit-transition: -webkit-transform .8s ease-in-out;
+    -ms-transition: -ms-transform .8s ease-in-out;
+    transition: transform .8s ease-in-out;
+  }
+  #rotating_image:hover {
+    transform: rotate(360deg) scale(1.7);
+    -ms-transform: rotate(360deg) scale(1.7);
+    -webkit-transform: rotate(360deg) scale(1.7);
+  }
