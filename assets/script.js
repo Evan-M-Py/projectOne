@@ -17,6 +17,8 @@
         for (let i = 0; i < userInput.length; i++) {
         localStorage.setItem(keyVal[i], userInput[i]);
         }
+
+        $("#userInputDiv").hide();
     
         quoteGen();
         astroFunction()
@@ -71,11 +73,25 @@ $(document).ready(function(){
     
         $.ajax({
             type:'POST',
-            url:'https://aztro.sameerkumar.website?sign=' + astroVal + '&day=today',
-            success:function(data){
-            console.log(data);
+            url:'https://aztro.sameerkumar.website?sign=' + astroVal + '&day=today'}).then(function(text){
+            console.log(text);
+            let userMood = text.mood           
+            $('#mood').append(userMood) 
+           
+            let userLuckyNum = text.lucky_number
+            $('#luckyNumber').append(userLuckyNum)
+
+            let userColor = text.color
+            $('#color').append(userColor)
+
+            let userCompat = text.compatability
+            $('#compatability').append(userCompat)
+          
+            let userDescription = text.description
+            $('#description').append(userDescription)
+
             }
-             })};
+             );}
     
     //Song Finder
 let term = ''
