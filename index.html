@@ -8,8 +8,8 @@
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-        <link rel="stylesheet" href="assets/style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="assets/style.css">
 
     <title>On The Right Foot</title>
 </head>
@@ -18,7 +18,7 @@
 
     <!-- Page Content -->
     <div class="container fade-in" id="userInputDiv">
-        <div class="jumbotron padding position"> 
+        <div class="jumbotron padding position">
             <h1 class="display-3">Welcome to On The Right Foot</h1>
             <p class="lead">Wake up the way you want to wake up!</p>
             <hr class="my-4">
@@ -28,13 +28,13 @@
                         <div class="form-group">
                             <label for="formGroupExampleInput">Name:</label>
                             <input type="text" class="form-control" id="userName" placeholder="John Doe">
-                        </div>                    
+                        </div>
                     </div>
                     <div class="col">
                         <div class="form-group">
                             <label for="formGroupExampleInput">Music Preference:</label>
                             <input type="text" class="form-control" id="musicChoice" placeholder="Artist's Name">
-                        </div>                   
+                        </div>
                     </div>
                 </div>
                 <div class="row">
@@ -56,33 +56,9 @@
                                 <option value="aquarius">Aquarius: January 20 – February 18</option>
                                 <option value="pisces">Pisces:February 19 – March 20</option>
                             </select>
-                        </div> 
-                    </div>
-                
-                    <div class="col">
-                        <div class="row ml-0">
-                            <label for="formGroupExampleInput">Would you like to see:</label>
-                        </div>
-                        <div class="row mt-1">
-                            <div class="col-6">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" id="userWeather">
-                                    <label class="form-check-label" for="userWeather">
-                                    The Weather
-                                    </label>
-                                </div>
-                            </div>
-                            <div class="col-6">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" id="userNews">>
-                                    <label class="form-check-label" for="userNews">
-                                    Daily News
-                                    </label>
-                                </div>
-                            </div>
                         </div>
                     </div>
-                </div>  
+                </div>
             </form>
             <br>
             <a class="btn btn-primary btn-lg" id="submitBtn" href="#" role="button">Submit</a>
@@ -90,7 +66,7 @@
     </div>
     <!-- end of container -->
 
-//SECOND USER VEIW
+    <!--//SECOND USER VIeW -->
 
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
@@ -157,7 +133,7 @@
                         </label>
                     </div>
                 </div>
-                
+
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                     <button type="button" class="btn btn-primary">Save Changes</button>
@@ -175,9 +151,14 @@
             <h1 class="display-3">Good Morning,
                 <span class="insertName"></span>!</h1>
             <hr class="my-4">
-            <p class="lead">
-                <span class="insertQuote"></span>
-            </p>
+            <div class="quotes text-center">
+                <span id="quote"></span>
+                </br>
+                <span id = "author"></span>
+                </div>
+                    <div class="text-center">
+                        <button class="btn btn-default get-quote" type="submit">New Quote!</button>
+                    </div>
         </header>
 
         <!-- Page Features -->
@@ -187,11 +168,13 @@
                 <div class="card h-100">
                     <img class="card-img-top" src="images/music.png" alt="musicPhoto">
                     <div class="card-body">
-                        <h4 class="card-title">Song of the Day</h4>
-                        <p class="card-text"></p>
-                    </div>
-                    <div class="card-footer">
-                        <a href="#" class="btn btn-primary">Find Out More!</a>
+                        <header>
+                            <h1 class="card-title">Search something for a little sip of music!</h1>
+                                <label for="searchInput"> </label>
+                                    <input type="text" id="searchInput">
+                                    <button id="songSearch">Search</button>
+                        </header>
+                            <main id="songs"></main>
                     </div>
                 </div>
             </div>
@@ -249,27 +232,26 @@
         </div>
 
         <div class="row text-center">
-
-            <!-- <div class="container">
-                <div class="app-title">
-                    <p>Weather</p>
+            <div class="col-lg-6 col-md-6 mb-4">
+                <div class="card h-100">
+                    <div class="card h-100">
+                        <img class="card-img-top" src="images/rsz_43017.jpg" alt="NewsPhoto">
+                        <div class="card-body">
+                            <h4 class="card-title">Top News Story</h4>
+                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo magni
+                                sapiente, tempore debitis beatae culpa natus architecto. Lorem ipsum, dolor sit amet
+                                consectetur adipisicing elit. Numquam commodi eos consectetur molestiae perferendis ipsum ea
+                                explicabo. Dignissimos, quasi. Qui unde porro explicabo. Quidem incidunt, hic cumque
+                                expedita cum ut! Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit repudiandae
+                                quae voluptas minima quidem officia? Quae, voluptatum consequatur inventore cum magni
+                                nesciunt delectus dolorem optio, id ad, eaque sint minus?</p>
+                        </div>
+                        <div class="card-footer">
+                            <a href="#" class="btn btn-primary">Find Out More!</a>
+                        </div>
+                    </div>
                 </div>
-                <div class="notification"> </div>
-                <div class="weather-container">
-                    <div class="weather-icon">
-                        <img src="icons/unknown.png" alt="">
-                    </div>
-                    <div class="temperature-value">
-                        <p>- °<span>C</span></p>
-                    </div>
-                    <div class="temperature-description">
-                        <p> - </p>
-                    </div>
-                    <div class="location">
-                        <p>-</p>
-                    </div>
-                </div>
-            </div> -->
+            </div>
 
             <div class="col-lg-6 col-md-6 mb-4">
                 <div class="card h-100">
@@ -289,25 +271,7 @@
                 </div>
             </div>
 
-        </div>
-        <div class="row text-center">
-            <div class="col-lg-6 col-md-6 mb-4">
-                <div class="card h-100">
-                    <img class="card-img-top" src="images/rsz_43017.jpg" alt="NewsPhoto">
-                    <div class="card-body">
-                        <h4 class="card-title">Top News Story</h4>
-                        <p class="card-text"></p>
-                    </div>
-                    <div class="card-footer">
-                        <a href="#" class="btn btn-primary">Find Out More!</a>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-        <!-- end of row -->
-
-    </div>
+</div>
     <!-- end of container -->
 
     <!-- Footer -->
@@ -320,7 +284,8 @@
 
 
     <!-- Bootstrap core JavaScript -->
-    <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>    
+    <script src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
         integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
         crossorigin="anonymous"></script>

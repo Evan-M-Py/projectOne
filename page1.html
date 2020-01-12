@@ -98,11 +98,14 @@
             <h1 class="display-3">Good Morning,
                 <span class="insertName"></span>!</h1>
             <hr class="my-4">
-            <p class="lead">
-                <span class="insertQuote">"Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta facere ex et
-                    totam obcaecati rem odio quos accusamus corporis facilis, dignissimos quis veritatis error optio
-                    quasi delectus illo atque ratione!"</span>
-            </p>
+            <div class="quotes text-center">
+                <span id="quote"></span>
+                </br>
+                <span id = "author"></span>
+                </div>
+                    <div class="text-center">
+                        <button class="btn btn-default get-quote" type="submit">New Quote!</button>
+                    </div>
         </header>
 
         <!-- Page Features -->
@@ -112,14 +115,13 @@
                 <div class="card h-100">
                     <img class="card-img-top" src="images/music.png" alt="musicPhoto">
                     <div class="card-body">
-                        <h4 class="card-title">Song of the Day</h4>
-                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente esse
-                            necessitatibus neque. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quibusdam
-                            aliquid facilis, nobis perspiciatis numquam quidem? Aut amet non tenetur reiciendis
-                            architecto quis commodi minima atque, eos culpa iste dignissimos voluptate. Lorem, ipsum
-                            dolor sit amet consectetur adipisicing elit. Sunt tempore ex voluptas eum fuga voluptatem
-                            ullam nemo. Nostrum ab accusamus, quae distinctio deleniti adipisci similique placeat
-                            consequuntur pariatur commodi dolores.</p>
+                        <header>
+                            <h1 class="card-title">Search something for a little sip of music!</h1>
+                                <label for="searchInput"> </label>
+                                    <input type="text" id="searchInput">
+                                    <button id="songSearch">Search</button>
+                        </header>
+                            <main id="songs"></main>
                     </div>
                     <div class="card-footer">
                         <a href="#" class="btn btn-primary">Find Out More!</a>
@@ -292,8 +294,8 @@
 
 
     <!-- Bootstrap core JavaScript -->
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+    <script src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
         crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
         integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
