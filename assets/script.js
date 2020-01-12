@@ -8,7 +8,7 @@
         let musicChoiceEl = document.getElementById("musicChoice").value;
         console.log(typeof userNYTPrefEl)
         let userInput = [ userNameEl, userAstroEl, musicChoiceEl];
-        let keyVal = ['name:', 'astro:', 'artistChoice:', ];
+        let keyVal = ['name:', 'astro:', 'artistChoice:' ];
         
         for (let i = 0; i < userInput.length; i++) {
         localStorage.setItem(keyVal[i], userInput[i]);
