@@ -1,31 +1,26 @@
 //SUBMIT BUTTON FUNTIONALITY
     //needs to flip html pages
     //needs to save user info to local storage
-
     const subBtnEl = document.getElementById("submitBtn");
-
     $('#submitBtn').click(function(){
         let userNameEl = document.getElementById("userName").value;
         let userAstroEl = document.getElementById("userAstro").value;
         let musicChoiceEl = document.getElementById("musicChoice").value;
-        let userWeatherEl = document.getElementById("userWeather").value;
-        let userNYTPrefEl = document.getElementById("userNews").value;
-    
-        let userInput = [ userNameEl, userAstroEl, musicChoiceEl, userWeatherEl, userNYTPrefEl ];
-        let keyVal = ['name:', 'astro:', 'artist choice:', 'Weather Op', 'NYT Pref' ];
+        console.log(typeof userNYTPrefEl)
+        let userInput = [ userNameEl, userAstroEl, musicChoiceEl];
+        let keyVal = ['name:', 'astro:', 'artistChoice:', ];
         
         for (let i = 0; i < userInput.length; i++) {
         localStorage.setItem(keyVal[i], userInput[i]);
         }
-
         $("#userInputDiv").hide();
     
-        quoteGen();
+    
         astroFunction()
     });
     
   //random quote function
-$(document).ready(function(){
+  $(document).ready(function(){
     var quote;
     var author;
 
@@ -80,20 +75,16 @@ $(document).ready(function(){
            
             let userLuckyNum = text.lucky_number
             $('#luckyNumber').append(userLuckyNum)
-
             let userColor = text.color
             $('#color').append(userColor)
-
-            let userCompat = text.compatability
-            $('#compatability').append(userCompat)
+            let userCompat = text.compatibility
+            $('#compatibility').append(userCompat)
           
             let userDescription = text.description
             $('#description').append(userDescription)
-
             }
              );}
-    
-    //Song Finder
+//Song Finder
 let term = ''
 const SongContainer = document.getElementById('songs')
 
