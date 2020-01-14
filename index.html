@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="assets/style.css">
+
+    <title>On The Right Foot</title>
+</head>
+
+<body>
+
+    <!---Welcome page-->
+    <div class="container fade-in removeClass" id="userWelcomeDiv">
+        <div class="jumbotron padding position ">
+            <h1 class="display-3">Welcome to On The Right Foot</h1>
+            <p class="lead">Thank you for starting your day with us! Sculpt your perfect morning in seconds, just enter your name, an artist or song title, 
+                and your astrological sign to get started. Along with personalized content, you'll find an inspirational quote and some of the top news 
+                articles from The New York Times. Use the 'settings' menu to hide content that doesnt contribute to your perfect morning!
+            </p>
+            <div class="mx-auto" style="width: 200px;">
+                <a class="btn btn-primary btn-lg" id="startButton" href="#" role="button">Start <strong>On the Right Foot</strong>!</a>
+            </div>
+            
+        </div>
+    </div>
+
+    <!-- Page Content -->
+    <div class="container invisible" id="userInputDiv">
+        <div class="jumbotron padding position">
+            <h1 class="display-3">Welcome to On The Right Foot</h1>
+            <p class="lead">Wake up the way you want to!</p>
+            <hr class="my-4">
+            <form>
+                <div class="row">
+                    <div class="col">
+                        <div class="form-group">
+                            <label for="formGroupExampleInput">Name:</label>
+                            <input type="text" class="form-control" id="userName" placeholder="John Doe">
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="form-group">
+                            <label for="formGroupExampleInput">Music Preference:</label>
+                            <input type="text" class="form-control" id="musicChoice" placeholder="Artist's Name">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <div class="form-group">
+                            <label for="userAstro">Pick Your Astrological Sign:</label>
+                            <select class="form-control" id="userAstro">
+                                <option selected>Select One:</option>
+                                <option value="aries">Aries: March 21 – April 19</option>
+                                <option value="taurus">Taurus: April 20 – May 20</option>
+                                <option value="gemini">Gemini: May 21 – June 20</option>
+                                <option value="cancer">Cancer: June 21 – July 22</option>
+                                <option value="leo">Leo: July 32 – August 22</option>
+                                <option value="virgo">Virgo: August 23 – September 22</option>
+                                <option value="libra">Libra: September 23 – October 22</option>
+                                <option value="scorpio">Scorpio: October 23 – November 21</option>
+                                <option value="sagittarius">Sagittarius: November 22 – December 21</option>
+                                <option value="capricorn">Capricorn: December 22 – January 19</option>
+                                <option value="aquarius">Aquarius: January 20 – February 18</option>
+                                <option value="pisces">Pisces:February 19 – March 20</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </form>
+            <br>
+            <a class="btn btn-primary btn-lg" id="submitBtn" href="#" role="button">Submit</a>
+        </div>
+    </div>
+    <!-- end of container -->
+
+    <!--//SECOND USER VIeW -->
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand grow-title" href="#">On The Right Foot</a>
+            <div id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <!-- button trigger modal -->
+                        <a class="nav-link" href="#" data-toggle="modal" data-target="#exampleModalScrollable">
+                            <i class="material-icons" id="rotating_image">settings</i>
+                            <span class="sr-only">(current)</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModalScrollable" tabindex="-1" role="dialog"
+        aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalScrollableTitle">Settings: Edit Your Information Below</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="form-check">
+                        <input class="form-check-input invisibleOp" type="checkbox"  id="musicOp">
+                        <label class="form-check-label" for="musicOp">
+                            Music
+                        </label>
+                    </div>
+                    <br>
+                    <div class="form-check">
+                        <input class="form-check-input invisibleOp" type="checkbox"  id="goalsOp">
+                        <label class="form-check-label" for="goalsOp">
+                            Goals
+                        </label>
+                    </div>
+                    <br>
+                    <div class="form-check">
+                        <input class="form-check-input invisibleOp" type="checkbox"  id="newsOp">
+                        <label class="form-check-label" for="NewsOp">
+                            News
+                        </label>
+                    </div>
+                    <br>
+                    <div class="form-check">
+                        <input class="form-check-input invisibleOp" type="checkbox"  id="horoscopeOp">
+                        <label class="form-check-label" for="horoscopeOp">
+                            Horoscope
+                        </label>
+                    </div>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary" id="invisibleButton">Save Changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end of modal -->
+
+    <!-- Page Content -->
+    <div class="container hideFirst ">
+
+        <!-- Jumbotron Header -->
+        <header class="jumbotron my-3 padding hideFirst invisible">
+            <h1 class="display-3">Good Morning,
+                <span class="insertName"id="goodMornName"></span>!</h1>
+            <hr class="my-4">
+            <div class="quotes text-center">
+                <span id="quote"></span>
+                </br>
+                <span id = "author"></span>
+                </div>
+                    <div class="text-center">
+                        <button class="btn btn-default get-quote" type="submit">New Quote!</button>
+                    </div>
+        </header>
+
+        <!-- Page Features -->
+        <div class="row text-center invisible hideFirst" >
+
+
+                       
+            <!-- FIRST ROW OF CARDS -->
+
+            <!---Taste of Music-->
+            <div class="col-lg-6 col-md-6 mb-4 foater">
+                <div class="card h-100" >                
+                    <img class="card-img-top" src="images/music.png" alt="musicPhoto">
+                    <div id="musicCardContents">
+                    <div class="card-body">
+                        <header>
+                            <h1 class="card-title">Search something for a little sip of music!</h1>
+                                <label for="searchInput"> </label>
+                                    <input type="text" id="searchInput">
+                                    <button id="songSearch">Search</button>
+                        </header>
+                            <main id="songs"></main>
+                    </div>
+                </div>
+                </div>
+            </div>
+
+            <!---Daily Goals-->
+            <div class="col-lg-6 col-md-6 mb-4 foater">
+                <div class="card h-100">
+                    <img class="card-img-top" src="images/goals.png" alt="todolistPhoto">
+                    <div id="goalCardContents">
+                        <div class="card-body">
+                            <h4 class="card-title">Daily Goals</h4>
+                            <p class="card-text">
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                        <div class="input-group-text">
+                                            <input class="taskCheck" id="taskOne" type="checkbox" aria-label="Checkbox for following text input">
+                                        </div>
+                                    </div>
+                                    <input type="text" class="form-control" placeholder="Goal #1" aria-label="goals"
+                                        aria-describedby="button-addon2">
+                                </div>
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                        <div class="input-group-text">
+                                            <input class="taskCheck" id="taskTwo" type="checkbox" aria-label="Checkbox for following text input">
+                                        </div>
+                                    </div>
+                                    <input type="text" class="form-control" placeholder="Goal #2" aria-label="goals"
+                                        aria-describedby="button-addon2">
+                                </div>
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                        <div class="input-group-text">
+                                            <input class="taskCheck" id="taskThree" type="checkbox" aria-label="Checkbox for following text input">
+                                        </div>
+                                    </div>
+                                    <input type="text" class="form-control" placeholder="Goal #3" aria-label="goals"
+                                        aria-describedby="button-addon2">
+                                </div>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            
+            </div>
+
+
+            <!-- SECOND ROW OF CARDS -->
+        <div class="row text-center">
+
+            <!--NYT articles-->
+            <div class="col-lg-6 col-md-6 mb-4 foater">
+                <div class="card h-100" >
+                    <div class="card h-100">
+                        <img class="card-img-top" src="images/rsz_43017.jpg" alt="NewsPhoto">
+                        <div id="nytCardContents">
+                            <div class="card-body" id="newsStorage">
+                                <h4 class="card-title">Top News Stories:</h4>
+                                <div class="articleOutline">
+                                <p class="newsTitle" id="dayOne"></p>
+                                <p class="newsAbstract" id="dayOneAbs"></p>
+                                <a class="btn btn-outline-secondary" target="_blank" type="button" id="dayOneButton">click here to view article!</a>
+                            </div>
+                            <div class="articleOutline">
+                                <p class="newsTitle" id="dayTwo"></p>
+                                <p class="newsAbstract" id="dayTwoAbs"></p>
+                                <a class="btn btn-outline-secondary" target="_blank" type="button" id="dayTwoButton">click here to view article!</a>
+                            </div>
+                            <div class="articleOutline">
+                                <p class="newsTitle" id="dayThree"></p>
+                                <p class="newsAbstract" id="dayThreeAbs"></p>
+                                <a class="btn btn-outline-secondary" target="_blank" type="button" id="dayThreeButton">click here to view article!</a>
+                            </div>
+                            <div class="articleOutline">
+                                <p class="newsTitle" id="dayFour"></p>
+                                <p class="newsAbstract" id="dayFourAbs"></p>
+                                <a class="btn btn-outline-secondary" target="_blank" type="button" id="dayFourButton">click here to view article!</a>
+                            </div>
+                            <div class="articleOutline">
+                                <p class="newsTitle" id="dayFive"></p>
+                                <p class="newsAbstract" id="dayFiveAbs"></p>
+                                <a class="btn btn-outline-secondary" target="_blank" type="button" id="dayFiveButton">click here to view article!</a>
+                            </div>
+                            <div class="articleOutline">
+                                <p class="newsTitle" id="daySix"></p>
+                                <p class="newsAbstract" id="daySixAbs"></p>
+                                <a class="btn btn-outline-secondary" target="_blank" type="button" id="daySixButton">click here to view article!</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+
+            <!---Horoscope-->
+            <div class="col-lg-6 col-md-6 mb-4 foater">
+                <div class="card " id="horoscopeCardContents">
+                    <img class="card-img-top" src="images/astro.png" alt="astroPhoto">
+                        <div id="horoscopeCardContents">
+                            <div class="card-body" id="horoscopeInfo">
+                                <h3 class="card-title">Your Horoscope</h3>
+                                <p class="horoscopeData" id="mood">Mood: </p>
+                                <p class="horoscopeData" id="luckyNumber">Lucky Number: </p>
+                                <p class="horoscopeData" id="color">Color: </p>
+                                <p class="horoscopeData" id="compatbility">Compatability: </p>
+                                <p class="horoscopeData" id="description">Description: </p>
+                                <p class="card-text"></p>
+                            </div>
+                        </div>
+                </div>
+            </div>
+    
+        </div>
+    </div>
+
+        
+    <!-- end of container -->
+
+    <!-- Footer -->
+    <footer class="py-3 bg-dark">
+        <div class="container">
+            <p class="m-0 text-center text-white">Copyright &copy; On The Right Foot 2020</p>
+        </div>
+    </footer>
+    <!-- end of footer -->
+
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+    <script rel="script" src="assets/script.js"></script>
+</body>
+
+</html>
