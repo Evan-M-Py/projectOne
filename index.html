@@ -16,11 +16,26 @@
 
 <body>
 
+    <!---Welcome page-->
+    <div class="container fade-in removeClass" id="userWelcomeDiv">
+        <div class="jumbotron padding position ">
+            <h1 class="display-3">Welcome to On The Right Foot</h1>
+            <p class="lead">Thank you for starting your day with us! Sculpt your perfect morning in seconds, just enter your name, an artist or song title, 
+                and your astrological sign to get started. Along with personalized content, you'll find an inspirational quote and some of the top news 
+                articles from The New York Times. Use the 'settings' menu to hide content that doesnt contribute to your perfect morning!
+            </p>
+            <div class="mx-auto" style="width: 200px;">
+                <a class="btn btn-primary btn-lg" id="startButton" href="#" role="button">Start <strong>On the Right Foot</strong>!</a>
+            </div>
+            
+        </div>
+    </div>
+
     <!-- Page Content -->
-    <div class="container fade-in" id="userInputDiv">
+    <div class="container invisible" id="userInputDiv">
         <div class="jumbotron padding position">
             <h1 class="display-3">Welcome to On The Right Foot</h1>
-            <p class="lead">Wake up the way you want to wake up!</p>
+            <p class="lead">Wake up the way you want to!</p>
             <hr class="my-4">
             <form>
                 <div class="row">
@@ -99,44 +114,37 @@
                 </div>
                 <div class="modal-body">
                     <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-                        <label class="form-check-label" for="defaultCheck1">
+                        <input class="form-check-input invisibleOp" type="checkbox"  id="musicOp">
+                        <label class="form-check-label" for="musicOp">
+                            Music
+                        </label>
+                    </div>
+                    <br>
+                    <div class="form-check">
+                        <input class="form-check-input invisibleOp" type="checkbox"  id="goalsOp">
+                        <label class="form-check-label" for="goalsOp">
                             Goals
                         </label>
                     </div>
                     <br>
                     <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-                        <label class="form-check-label" for="defaultCheck1">
+                        <input class="form-check-input invisibleOp" type="checkbox"  id="newsOp">
+                        <label class="form-check-label" for="NewsOp">
                             News
                         </label>
                     </div>
                     <br>
                     <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-                        <label class="form-check-label" for="defaultCheck1">
+                        <input class="form-check-input invisibleOp" type="checkbox"  id="horoscopeOp">
+                        <label class="form-check-label" for="horoscopeOp">
                             Horoscope
-                        </label>
-                    </div>
-                    <br>
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-                        <label class="form-check-label" for="defaultCheck1">
-                            Weather
-                        </label>
-                    </div>
-                    <br>
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-                        <label class="form-check-label" for="defaultCheck1">
-                            Music
                         </label>
                     </div>
                 </div>
 
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Save Changes</button>
+                    <button type="button" class="btn btn-primary" id="invisibleButton">Save Changes</button>
                 </div>
             </div>
         </div>
@@ -144,12 +152,12 @@
     <!-- end of modal -->
 
     <!-- Page Content -->
-    <div class="container fade-in">
+    <div class="container hideFirst ">
 
         <!-- Jumbotron Header -->
-        <header class="jumbotron my-3 padding">
+        <header class="jumbotron my-3 padding hideFirst invisible">
             <h1 class="display-3">Good Morning,
-                <span class="insertName"></span>!</h1>
+                <span class="insertName"id="goodMornName"></span>!</h1>
             <hr class="my-4">
             <div class="quotes text-center">
                 <span id="quote"></span>
@@ -162,11 +170,17 @@
         </header>
 
         <!-- Page Features -->
-        <div class="row text-center">
+        <div class="row text-center invisible hideFirst" >
 
-            <div class="col-lg-6 col-md-6 mb-4">
-                <div class="card h-100">
+
+                       
+            <!-- FIRST ROW OF CARDS -->
+
+            <!---Taste of Music-->
+            <div class="col-lg-6 col-md-6 mb-4 foater">
+                <div class="card h-100" >                
                     <img class="card-img-top" src="images/music.png" alt="musicPhoto">
+                    <div id="musicCardContents">
                     <div class="card-body">
                         <header>
                             <h1 class="card-title">Search something for a little sip of music!</h1>
@@ -177,101 +191,121 @@
                             <main id="songs"></main>
                     </div>
                 </div>
+                </div>
             </div>
 
-            <div class="col-lg-6 col-md-6 mb-4">
+            <!---Daily Goals-->
+            <div class="col-lg-6 col-md-6 mb-4 foater">
                 <div class="card h-100">
                     <img class="card-img-top" src="images/goals.png" alt="todolistPhoto">
-                    <div class="card-body">
-                        <h4 class="card-title">Daily Goals</h4>
-                        <p class="card-text">
-                            <div class="input-group mb-3">
-                                <div class="input-group-prepend">
-                                    <div class="input-group-text">
-                                        <input type="checkbox" aria-label="Checkbox for following text input">
+                    <div id="goalCardContents">
+                        <div class="card-body">
+                            <h4 class="card-title">Daily Goals</h4>
+                            <p class="card-text">
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                        <div class="input-group-text">
+                                            <input class="taskCheck" id="taskOne" type="checkbox" aria-label="Checkbox for following text input">
+                                        </div>
                                     </div>
+                                    <input type="text" class="form-control" placeholder="Goal #1" aria-label="goals"
+                                        aria-describedby="button-addon2">
                                 </div>
-                                <input type="text" class="form-control" placeholder="Goal #1" aria-label="goals"
-                                    aria-describedby="button-addon2">
-                                <div class="input-group-append">
-                                    <button class="btn btn-outline-secondary" type="button"
-                                        id="button-addon2">Save</button>
-                                </div>
-                            </div>
-                            <div class="input-group mb-3">
-                                <div class="input-group-prepend">
-                                    <div class="input-group-text">
-                                        <input type="checkbox" aria-label="Checkbox for following text input">
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                        <div class="input-group-text">
+                                            <input class="taskCheck" id="taskTwo" type="checkbox" aria-label="Checkbox for following text input">
+                                        </div>
                                     </div>
+                                    <input type="text" class="form-control" placeholder="Goal #2" aria-label="goals"
+                                        aria-describedby="button-addon2">
                                 </div>
-                                <input type="text" class="form-control" placeholder="Goal #2" aria-label="goals"
-                                    aria-describedby="button-addon2">
-                                <div class="input-group-append">
-                                    <button class="btn btn-outline-secondary" type="button"
-                                        id="button-addon2">Save</button>
-                                </div>
-                            </div>
-                            <div class="input-group mb-3">
-                                <div class="input-group-prepend">
-                                    <div class="input-group-text">
-                                        <input type="checkbox" aria-label="Checkbox for following text input">
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                        <div class="input-group-text">
+                                            <input class="taskCheck" id="taskThree" type="checkbox" aria-label="Checkbox for following text input">
+                                        </div>
                                     </div>
+                                    <input type="text" class="form-control" placeholder="Goal #3" aria-label="goals"
+                                        aria-describedby="button-addon2">
                                 </div>
-                                <input type="text" class="form-control" placeholder="Goal #3" aria-label="goals"
-                                    aria-describedby="button-addon2">
-                                <div class="input-group-append">
-                                    <button class="btn btn-outline-secondary" type="button"
-                                        id="button-addon2">Save</button>
-                                </div>
-                            </div>
-                        </p>
+                            </p>
+                        </div>
                     </div>
-                    <div class="card-footer addPadding"></div>
                 </div>
+            
             </div>
-        </div>
 
+
+            <!-- SECOND ROW OF CARDS -->
         <div class="row text-center">
-            <div class="col-lg-6 col-md-6 mb-4">
-                <div class="card h-100">
+
+            <!--NYT articles-->
+            <div class="col-lg-6 col-md-6 mb-4 foater">
+                <div class="card h-100" >
                     <div class="card h-100">
                         <img class="card-img-top" src="images/rsz_43017.jpg" alt="NewsPhoto">
-                        <div class="card-body">
-                            <h4 class="card-title">Top News Story</h4>
-                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo magni
-                                sapiente, tempore debitis beatae culpa natus architecto. Lorem ipsum, dolor sit amet
-                                consectetur adipisicing elit. Numquam commodi eos consectetur molestiae perferendis ipsum ea
-                                explicabo. Dignissimos, quasi. Qui unde porro explicabo. Quidem incidunt, hic cumque
-                                expedita cum ut! Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit repudiandae
-                                quae voluptas minima quidem officia? Quae, voluptatum consequatur inventore cum magni
-                                nesciunt delectus dolorem optio, id ad, eaque sint minus?</p>
-                        </div>
-                        <div class="card-footer">
-                            <a href="#" class="btn btn-primary">Find Out More!</a>
+                        <div id="nytCardContents">
+                            <div class="card-body" id="newsStorage">
+                                <h4 class="card-title">Top News Stories:</h4>
+                                <div class="articleOutline">
+                                <p class="newsTitle" id="dayOne"></p>
+                                <p class="newsAbstract" id="dayOneAbs"></p>
+                                <a class="btn btn-outline-secondary" target="_blank" type="button" id="dayOneButton">click here to view article!</a>
+                            </div>
+                            <div class="articleOutline">
+                                <p class="newsTitle" id="dayTwo"></p>
+                                <p class="newsAbstract" id="dayTwoAbs"></p>
+                                <a class="btn btn-outline-secondary" target="_blank" type="button" id="dayTwoButton">click here to view article!</a>
+                            </div>
+                            <div class="articleOutline">
+                                <p class="newsTitle" id="dayThree"></p>
+                                <p class="newsAbstract" id="dayThreeAbs"></p>
+                                <a class="btn btn-outline-secondary" target="_blank" type="button" id="dayThreeButton">click here to view article!</a>
+                            </div>
+                            <div class="articleOutline">
+                                <p class="newsTitle" id="dayFour"></p>
+                                <p class="newsAbstract" id="dayFourAbs"></p>
+                                <a class="btn btn-outline-secondary" target="_blank" type="button" id="dayFourButton">click here to view article!</a>
+                            </div>
+                            <div class="articleOutline">
+                                <p class="newsTitle" id="dayFive"></p>
+                                <p class="newsAbstract" id="dayFiveAbs"></p>
+                                <a class="btn btn-outline-secondary" target="_blank" type="button" id="dayFiveButton">click here to view article!</a>
+                            </div>
+                            <div class="articleOutline">
+                                <p class="newsTitle" id="daySix"></p>
+                                <p class="newsAbstract" id="daySixAbs"></p>
+                                <a class="btn btn-outline-secondary" target="_blank" type="button" id="daySixButton">click here to view article!</a>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
+            </div>
 
-            <div class="col-lg-6 col-md-6 mb-4">
-                <div class="card h-100">
+            <!---Horoscope-->
+            <div class="col-lg-6 col-md-6 mb-4 foater">
+                <div class="card " id="horoscopeCardContents">
                     <img class="card-img-top" src="images/astro.png" alt="astroPhoto">
-                    <div class="card-body" id="horoscopeInfo">
-                        <h4 class="card-title">Your Horoscope</h4>
-                        <p class="horoscopeData" id="mood">Mood: </p>
-                        <p class="horoscopeData" id="luckyNumber">Lucky Number: </p>
-                        <p class="horoscopeData" id="color">Color: </p>
-                        <p class="horoscopeData" id="compatbility">Compatability: </p>
-                        <p class="horoscopeData" id="description">Description: </p>
-                        <p class="card-text"></p>
-                    </div>
-                    <div class="card-footer">
-                        <a href="#" class="btn btn-primary">Find Out More!</a>
-                    </div>
+                        <div id="horoscopeCardContents">
+                            <div class="card-body" id="horoscopeInfo">
+                                <h3 class="card-title">Your Horoscope</h3>
+                                <p class="horoscopeData" id="mood">Mood: </p>
+                                <p class="horoscopeData" id="luckyNumber">Lucky Number: </p>
+                                <p class="horoscopeData" id="color">Color: </p>
+                                <p class="horoscopeData" id="compatbility">Compatability: </p>
+                                <p class="horoscopeData" id="description">Description: </p>
+                                <p class="card-text"></p>
+                            </div>
+                        </div>
                 </div>
             </div>
+    
+        </div>
+    </div>
 
-</div>
+        
     <!-- end of container -->
 
     <!-- Footer -->
