@@ -157,7 +157,7 @@ function songFinderTwo() {
     const url = `https://itunes.apple.com/search?limit=1&media=music&term=${termTwo}`
     fetch(url,{
         mode:'no-cors'
-    }
+    })
         .then((response) => response.json())
         .then((data) => {
             // console.log(data.results);
