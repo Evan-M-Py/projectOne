@@ -1,3 +1,9 @@
+$(document).ready(function(){
+    $("#onTheRightFoot").click(function(){
+        location.reload(true);
+    });
+});
+
 
 $('#startButton').click(function(){
     $('#userWelcomeDiv').remove();
@@ -108,7 +114,7 @@ const updateTerm = () => {
             SongContainer.removeChild(SongContainer.firstChild);
         }
         const url = `https://itunes.apple.com/search?limit=1&media=music&term=${term}`
-        fetch(url)
+        fetch(url, {mode: 'no-cors'})
             .then((response) => response.json())
             .then((data) => {
                 // console.log(data.results);
