@@ -108,9 +108,7 @@ const updateTerm = () => {
             SongContainer.removeChild(SongContainer.firstChild);
         }
         const url = `https://itunes.apple.com/search?limit=1&media=music&term=${term}`
-        fetch(url,{
-            mode:'no-cors'
-        })
+        fetch(url)
             .then((response) => response.json())
             .then((data) => {
                 // console.log(data.results);
@@ -155,9 +153,7 @@ function songFinderTwo() {
         SongContainer.removeChild(SongContainer.firstChild);
     }
     const url = `https://itunes.apple.com/search?limit=1&media=music&term=${termTwo}`
-    fetch(url,{
-        mode:'no-cors'
-    })
+    fetch(url)
         .then((response) => response.json())
         .then((data) => {
             // console.log(data.results);
